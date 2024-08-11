@@ -21,5 +21,26 @@ This project has four files: <br/>
 <br/>
 In summary, Calculator defines the remote operations that can be performed.
 <br/>
+<br/>
 **CalculatorImplementation** <br/>
+- UnicastRemoteObject: A class from the java.rmi.server package which exports a remote object to make it available for recieving incoming calls. <br/>
+- Stack: The stack class is imported from the java.util package.<br/>
+- implements: Declares that CalculatorImplementation implements the Calculator interface.<br/>
+- Stack<Integer>: Used to store integer values.<br/>
+- @Override: Indicates that he method is overriding a method in the Calculator interface.<br/>
+- IllegealStateException: Throws exception if the stack is empty.<br/>
+- switch: Determines which operation to perform based on the 'operator' string.<br/>
+- min: Pushes the min values of all popped values.<br/>
+- max: Pushes the max value of all popped values.<br/>
+- lcm: pushes the lcm of popped values.<br/>
+- gcd: Pushes the gcd of popped values.<br/>
+- int min = stack.stream().min(Integer::compare).orElseThrow(IllegalStateException::new);: Finds min value in the stack using a stream and comparator, throwing an exception if no min value is found. (Similar for max value) <br/>
+- while (!stack.isEmpty()) { lcm = lcm(lcm, stack.pop()); } : Iterates over the stack, calculating lcm of values. (Similar for gcd) <br/>
+<br/>
+<br/>
+**CalculatorServer**
+
+
+
+
 
